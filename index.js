@@ -9,10 +9,12 @@ require('dotenv/config')
 const systemsRoute = require('./Routes/systems')
 
 //middleware
-app.use(cors({
-    origin: "http://localhost:5050",
+app.use(
+  cors({
+    origin: ["http://localhost:5050", "https://anatomica.herokuapp.com/"],
     exposedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"]
-}))
+  })
+);
 
 
 // app.use(function (req, res, next) {
